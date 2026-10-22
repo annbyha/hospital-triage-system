@@ -5,15 +5,15 @@
 
 A C# class library that classifies emergency patients into **Red (Immediate)**, **Yellow (Urgent)** and **Green (Non-critical)** using propositional logic from Discrete Mathematics.
 
-## 📌 Problem
+##  Problem
 Manual triage is inconsistent during peak hours and may delay critical patients.
 
-## ✨ Features
+##  Features
 - Classifies patients using logic rules (P, Q, R)
 - Alerts medical staff for RED patients
 - Patient queue sorted by priority
 
-## 🧠 Logic
+##  Logic
 | Rule | Condition | Priority |
 |------|-----------|----------|
 | 1 | P | 🔴 Red |
@@ -21,20 +21,20 @@ Manual triage is inconsistent during peak hours and may delay critical patients.
 | 3 | ¬P ∧ (Q ∨ R) | 🟡 Yellow |
 | 4 | ¬P ∧ ¬Q ∧ ¬R | 🟢 Green |
 
-## 🗂️ Classes
+## Classes
 `Patient` · `VitalSigns` · `MedicalStaff` · `TriageEngine` · `TriageResult` · `AlertService` · `PatientQueue`
 
-## ▶️ How to Run
+##  How to Run
 ```bash
 git clone https://github.com/ORG/hospital-triage-system.git
 cd hospital-triage-system/src
 dotnet run
 ```
 
-## 📐 UML Diagram
+##  UML Diagram
 ![UML](docs/uml.png)
 
-## 👥 Group 04
+##  Group 04
 | Name | No ID |
 |Ainin Nabihah binti Osman |26002665|
 | ... | ... |
