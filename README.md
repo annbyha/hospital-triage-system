@@ -35,8 +35,8 @@ dotnet run
 ![UML](docs/uml.png)
 
 ## 👥 Group 04
-| Name | Role |
-|------|------|
+| Name | No ID |
+|Ainin Nabihah binti Osman |26002665|
 | ... | ... |
 
 Universiti Teknologi PETRONAS · Discrete Mathematics / OOP · 2026
