@@ -1,0 +1,12 @@
+22/10/2026 08:00 | REG | P001 | Ahmad | Age: 45 | Symptom: Fever | HR: 88 | SBP: 120 | Priority: Green
+22/10/2026 08:05 | REG | P002 | Siti | Age: 32 | Symptom: Chest pain | HR: 110 | SBP: 150 | Priority: Red
+22/10/2026 08:10 | REG | P003 | Kumar | Age: 56 | Symptom: Headache | HR: 95 | SBP: 135 | Priority: Green
+22/10/2026 08:15 | REG | P004 | Aisyah | Age: 24 | Symptom: Difficulty breathing | HR: 125 | SBP: 175 | Priority: Red
+22/10/2026 08:20 | REG | P005 | Daniel | Age: 40 | Symptom: Cough | HR: 105 | SBP: 125 | Priority: Green
+22/10/2026 08:25 | REG | P006 | Farah | Age: 29 | Symptom: Minor injury | HR: 130 | SBP: 120 | Priority: Yellow
+22/10/2026 08:30 | REG | P007 | Ravi | Age: 67 | Symptom: Unconsciousness | HR: 80 | SBP: 100 | Priority: Red
+22/10/2026 08:35 | REG | P008 | Nurul | Age: 21 | Symptom: Fever | HR: 75 | SBP: 115 | Priority: Green
+22/10/2026 08:40 | REG | P009 | Adam | Age: 51 | Symptom: Chest pain | HR: 90 | SBP: 185 | Priority: Red
+22/10/2026 08:45 | REG | P010 | Mei Ling | Age: 36 | Symptom: Headache | HR: 125 | SBP: 140 | Priority: Yellow
+23/10/2026 02:49 | REG | P011 | Rafiqah Rashid | Age: 56 | Symptom: Difficulty breathing | HR: 130 | SBP: 85 | Priority: Red
+23/10/2026 02:49 | TREATED | P011 | Rafiqah Rashid | Treated by: Dr. Aiman
