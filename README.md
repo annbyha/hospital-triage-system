@@ -3,7 +3,7 @@
 ![C#](https://img.shields.io/badge/C%23-.NET-512BD4?logo=dotnet)
 ![Status](https://img.shields.io/badge/status-completed-brightgreen)
 
-A C# class library that classifies emergency patients into **Red (Immediate)**, **Yellow (Urgent)** and **Green (Non-critical)** using propositional logic from Discrete Mathematics.
+A C# class library that classifies emergency patients into **Red (Immediate)**, **Yellow (Urgent)** and **Green (Non-critical)** using propositional logic.
 
 ##  Problem
 Manual triage is inconsistent during peak hours and may delay critical patients.
