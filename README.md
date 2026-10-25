@@ -7,37 +7,14 @@
 
 A C#-based **Hospital Patient Triage System** developed to demonstrate Object-Oriented Programming (OOP), propositional logic, patient prioritisation, and medical staff coordination.
 
-##  1. Project Overview
+##  Project Overview
 
 Patient triage is the process of assessing patients and prioritising their treatment based on the urgency of their conditions. During busy periods, an organised triage process can help medical staff identify patients who require immediate attention.
 
 This project models a hospital triage system that evaluates patient symptoms and vital signs, assigns priority levels, manages the patient queue, and supports communication between nurses and doctors.
 
-##  2. Problem Statement
 
-Manual patient prioritisation can become challenging during peak hours. Without a consistent assessment process, urgent cases may experience delays while medical staff manage multiple patients.
-
-The Hospital Patient Triage System aims to demonstrate how predefined decision rules and an organised queue can support a more consistent patient prioritisation process.
-
-##  3. Project Objectives
-
-- To apply Object-Oriented Programming principles using C#.
-- To represent patient triage decisions using propositional logic.
-- To evaluate patient symptoms and vital signs.
-- To classify patients into Red, Yellow, and Green priority levels.
-- To manage the patient queue according to triage priority.
-- To model interactions between patients, nurses, and doctors.
-
-##  4. System Features
-
-- **Patient Information Management** — stores patient details, symptoms, and vital signs.
-- **Triage Evaluation** — evaluates patient conditions using predefined rules.
-- **Priority Classification** — assigns Red, Yellow, or Green priority levels.
-- **Queue Management** — organises waiting patients according to priority and arrival time.
-- **Staff Coordination** — models communication between the triage system and medical staff.
-- **Severe Symptom Detection** — checks symptoms against predefined severe symptom rules.
-
-##  5. Triage Priority Levels
+##  Triage Priority Levels
 
 | Priority | Category | Description |
 |---|---|---|
@@ -47,7 +24,7 @@ The Hospital Patient Triage System aims to demonstrate how predefined decision r
 
 *The priority assigned depends on the rules implemented in the system. This project is an academic simulation and is not intended for real-world medical decision-making.*
 
-##  6. Propositional Logic
+##  Propositional Logic
 
 The system uses propositional logic to represent the conditions involved in patient triage.
 
@@ -76,35 +53,10 @@ The system uses propositional logic to represent the conditions involved in pati
 
 **Note:** These rules describe the intended triage logic. They should match the final decision-making conditions implemented in `TriageEngine`.
 
-##  7. System Classes
-
-The system consists of 10 classes and one enum based on the project UML design.
-
-| Class / Enum | Responsibility |
-|---|---|
-| `Person` | Stores common personal information. |
-| `StaffMember` | Represents hospital staff and inherits from `Person`. |
-| `Nurse` | Represents a nurse and supports patient monitoring. |
-| `Doctor` | Represents a doctor and supports patient treatment. |
-| `Patient` | Stores patient details, symptoms, vital signs, and priority. |
-| `VitalSigns` | Stores and validates heart rate and systolic blood pressure. |
-| `PriorityLevel` | Defines Red, Yellow, and Green priority levels. |
-| `PatientQueue` | Manages the queue of waiting patients. |
-| `SevereSymptomRules` | Defines and checks severe symptoms. |
-| `TriageEngine` | Evaluates patient conditions and determines triage priority. |
-
-##  8. Object-Oriented Design
-
-The project demonstrates key Object-Oriented Programming concepts:
-
-- **Inheritance:** `StaffMember`, `Nurse`, `Doctor`, and `Patient` follow the inheritance relationships defined in the UML.
-- **Encapsulation:** Classes organise data and the operations associated with it.
-- **Abstraction:** Each class has a specific responsibility within the system.
-- **Association:** The triage engine interacts with patients, vital signs, the patient queue, and staff.
 
 
 
-##  9. How to Run
+##  How to Run
 
 ### Prerequisites
 
@@ -132,7 +84,7 @@ Replace `YOUR-USERNAME/YOUR-REPOSITORY` with the actual GitHub repository path.
 
 If the project contains only a class library, a separate executable project is required to run the demonstration.
 
-##  10. Group Members — Group 04
+##  Group Members — Group 04
 
 | No. | Name | Programme | Student ID |
 |---:|---|:---:|---:|
@@ -142,7 +94,7 @@ If the project contains only a class library, a separate executable project is r
 | 4 | Humaira Kaisah Binti Ahmad Sherhan | IT | 24006090 |
 | 5 | Deenira Lipin | CS | 26000190 |
 
-##  12. Academic Information
+##  Academic Information
 
 **Institution:** Universiti Teknologi PETRONAS  
 **Academic Year:** 2026  
