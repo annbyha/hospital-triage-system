@@ -44,7 +44,7 @@ The system uses propositional logic to represent the conditions involved in pati
 
 
 
-##  Group Members — Group 04
+##  Group Members 
 
 | No. | Name | Programme | Student ID |
 |---:|---|:---:|---:|
