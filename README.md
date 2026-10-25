@@ -47,24 +47,34 @@ The Hospital Patient Triage System aims to demonstrate how predefined decision r
 
 *The priority assigned depends on the rules implemented in the system. This project is an academic simulation and is not intended for real-world medical decision-making.*
 
-##  6. Propositional Logic
+## 🧠 6. Propositional Logic
 
-Propositional logic is used to represent conditions involved in the triage decision process.
+The system uses propositional logic to represent the conditions involved in patient triage.
 
-The following symbols describe the intended evaluation criteria:
+### Propositional Variables
 
-- **P** — the patient has severe symptoms.
-- **Q** — the patient's heart rate is abnormal.
-- **R** — the patient's systolic blood pressure is abnormal.
+- **P** — The patient has severe symptoms.
+- **Q** — The patient's heart rate is abnormal.
+- **R** — The patient's systolic blood pressure is abnormal.
+
+### Triage Decision Rules
 
 | Rule | Logical Expression | Priority |
-|---|---|---|
-| 1 | \(P\) | 🔴 Red |
-| 2 | \(\neg P \land Q \land R\) | 🔴 Red |
-| 3 | \(\neg P \land (Q \lor R)\) | 🟡 Yellow |
-| 4 | \(\neg P \land \neg Q \land \neg R\) | 🟢 Green |
+|:---:|---|---|
+| 1 | P | 🔴 Red — Immediate |
+| 2 | ¬P ∧ Q ∧ R | 🔴 Red — Immediate |
+| 3 | ¬P ∧ (Q ∨ R) | 🟡 Yellow — Urgent |
+| 4 | ¬P ∧ ¬Q ∧ ¬R | 🟢 Green — Non-critical |
 
-**Note:** These expressions must correspond to the final decision rules implemented in `TriageEngine`. Update this table if the actual code uses different conditions.
+### Logical Operators
+
+| Symbol | Meaning |
+|:---:|---|
+| ¬ | NOT — the condition is false |
+| ∧ | AND — all conditions must be true |
+| ∨ | OR — at least one condition must be true |
+
+**Note:** These rules describe the intended triage logic. They should match the final decision-making conditions implemented in `TriageEngine`.
 
 ##  7. System Classes
 
