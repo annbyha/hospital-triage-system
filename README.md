@@ -44,36 +44,6 @@ The system uses propositional logic to represent the conditions involved in pati
 
 
 
-
-
-##  How to Run
-
-### Prerequisites
-
-- .NET SDK
-- Git
-- A C# development environment, such as Visual Studio or Visual Studio Code
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-cd YOUR-REPOSITORY
-```
-
-### Run the Application
-
-Navigate to the directory containing the executable C# project file (`.csproj`), then run:
-
-```bash
-dotnet restore
-dotnet run
-```
-
-Replace `YOUR-USERNAME/YOUR-REPOSITORY` with the actual GitHub repository path.
-
-If the project contains only a class library, a separate executable project is required to run the demonstration.
-
 ##  Group Members — Group 04
 
 | No. | Name | Programme | Student ID |
