@@ -43,15 +43,6 @@ The system uses propositional logic to represent the conditions involved in pati
 | 3 | ¬P ∧ (Q ∨ R) | 🟡 Yellow — Urgent |
 | 4 | ¬P ∧ ¬Q ∧ ¬R | 🟢 Green — Non-critical |
 
-### Logical Operators
-
-| Symbol | Meaning |
-|:---:|---|
-| ¬ | NOT — the condition is false |
-| ∧ | AND — all conditions must be true |
-| ∨ | OR — at least one condition must be true |
-
-**Note:** These rules describe the intended triage logic. They should match the final decision-making conditions implemented in `TriageEngine`.
 
 
 
