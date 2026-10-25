@@ -47,7 +47,7 @@ The Hospital Patient Triage System aims to demonstrate how predefined decision r
 
 *The priority assigned depends on the rules implemented in the system. This project is an academic simulation and is not intended for real-world medical decision-making.*
 
-## 🧠 6. Propositional Logic
+##  6. Propositional Logic
 
 The system uses propositional logic to represent the conditions involved in patient triage.
 
