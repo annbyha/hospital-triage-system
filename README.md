@@ -38,10 +38,10 @@ The system uses propositional logic to represent the conditions involved in pati
 
 | Rule | Logical Expression | Priority |
 |:---:|---|---|
-| 1 | P | 🔴 Red — Immediate |
-| 2 | ¬P ∧ Q ∧ R | 🔴 Red — Immediate |
-| 3 | ¬P ∧ (Q ∨ R) | 🟡 Yellow — Urgent |
-| 4 | ¬P ∧ ¬Q ∧ ¬R | 🟢 Green — Non-critical |
+| 1 | P |  Red — Immediate |
+| 2 | ¬P ∧ Q ∧ R |  Red — Immediate |
+| 3 | ¬P ∧ (Q ∨ R) |  Yellow — Urgent |
+| 4 | ¬P ∧ ¬Q ∧ ¬R |  Green — Non-critical |
 
 
 
