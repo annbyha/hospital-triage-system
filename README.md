@@ -18,9 +18,9 @@ This project models a hospital triage system that evaluates patient symptoms and
 
 | Priority | Category | Description |
 |---|---|---|
-| 🔴 Red | Immediate | Critical cases requiring immediate attention |
-| 🟡 Yellow | Urgent | Patients requiring urgent assessment |
-| 🟢 Green | Non-critical | Patients whose conditions are less urgent |
+|  Red | Immediate | Critical cases requiring immediate attention |
+|  Yellow | Urgent | Patients requiring urgent assessment |
+|  Green | Non-critical | Patients whose conditions are less urgent |
 
 *The priority assigned depends on the rules implemented in the system. This project is an academic simulation and is not intended for real-world medical decision-making.*
 
