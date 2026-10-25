@@ -62,7 +62,5 @@ The system uses propositional logic to represent the conditions involved in pati
 **Course Codes:** TGB1103 / DBB1093 / TFB1033 / TEB1043  
 **Lecturer:** M Nordin B Zakaria
 
----
 
-*Developed by Group 04 for academic purposes to demonstrate propositional logic and Object-Oriented Programming in C#.*
 
