@@ -1,21 +1,22 @@
 namespace HospitalTriage;
-public class StaffMember : Person
+
+public abstract class StaffMember : Person
 {
-    public string StaffId { get; set; }
+    public string Role { get; set; }
+    public bool IsOnDuty { get; set; }
 
-    public StaffMember(string staffId, string name, int age)
-        : base(name, age)
+    public StaffMember(
+        int personID, string name, int age, string role)
+        : base(personID, name, age)
     {
-        StaffId = staffId;
+        Role = role;
+        IsOnDuty = true;
     }
 
-    public virtual string GetRole()
+    public override string GetDetails()
     {
-        return "Staff";
+        return $"{Role}: {Name}";
     }
 
-    public override string GetInfo()
-    {
-        return GetRole() + " " + Name + " (" + StaffId + ")";
-    }
+    public abstract void ReceiveAlert(Patient p);
 }

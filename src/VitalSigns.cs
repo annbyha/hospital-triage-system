@@ -1,4 +1,5 @@
 namespace HospitalTriage;
+
 public class VitalSigns
 {
     public int HeartRate { get; set; }
@@ -10,15 +11,8 @@ public class VitalSigns
         SystolicBP = systolicBP;
     }
 
-    // Proposition Q
-    public bool IsHeartRateAbnormal()
+    public bool IsValid()
     {
-        return HeartRate < 50 || HeartRate > 120;
-    }
-
-    // Proposition R
-    public bool IsBloodPressureAbnormal()
-    {
-        return SystolicBP < 90 || SystolicBP > 180;
+        return HeartRate >= 0 && SystolicBP >= 0;
     }
 }

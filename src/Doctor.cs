@@ -1,24 +1,25 @@
+using System;
+
 namespace HospitalTriage;
+
 public class Doctor : StaffMember
 {
-    public string Specialty { get; set; }
+    public string Specialisation { get; set; }
 
-    public Doctor(string staffId, string name, int age, string specialty)
-        : base(staffId, name, age)
+    public Doctor(
+        int id, string name, int age, string specialisation)
+        : base(id, name, age, "Doctor")
     {
-        Specialty = specialty;
+        Specialisation = specialisation;
     }
 
-    public override string GetRole()
+    public override void ReceiveAlert(Patient p)
     {
-        return "Doctor";
+        Console.WriteLine($"Doctor {Name} received an alert for {p.Name}.");
     }
 
-    
-    public string Treat(Patient patient)
+    public void TreatPatient(Patient p)
     {
-        patient.Status = "Treated";
-        patient.TreatedBy = Name;
-        return Name + " (" + Specialty + ") is treating " + patient.Name;
+        Console.WriteLine($"Doctor {Name} is treating {p.Name}.");
     }
 }

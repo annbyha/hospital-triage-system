@@ -1,22 +1,25 @@
+using System;
+
 namespace HospitalTriage;
+
 public class Nurse : StaffMember
 {
     public string Ward { get; set; }
 
-    public Nurse(string staffId, string name, int age, string ward)
-        : base(staffId, name, age)
+    public Nurse(
+        int id, string name, int age, string ward)
+        : base(id, name, age, "Nurse")
     {
         Ward = ward;
     }
 
-    public override string GetRole()
+    public override void ReceiveAlert(Patient p)
     {
-        return "Nurse";
+        Console.WriteLine($"Nurse {Name} received an alert for {p.Name}.");
     }
 
-
-    public string CheckPatient(Patient patient)
+    public void MonitorPatient(Patient p)
     {
-        return Name + " checked vitals of " + patient.Name + " at " + Ward;
+        Console.WriteLine($"Nurse {Name} is monitoring {p.Name}.");
     }
 }

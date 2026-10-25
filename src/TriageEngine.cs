@@ -1,44 +1,83 @@
+using System.Collections.Generic;
+
 namespace HospitalTriage;
+
 public class TriageEngine
 {
     private SevereSymptomRules rules;
+    private PatientQueue queue;
+    private List<StaffMember> staffList;
+
+    public int MinHeartRate = 50;
+    public int MaxHeartRate = 120;
+    public int MinSystolicBP = 90;
+    public int MaxSystolicBP = 180;
 
     public TriageEngine(SevereSymptomRules rules)
     {
         this.rules = rules;
+        queue = new PatientQueue();
+        staffList = new List<StaffMember>();
     }
 
-    public PriorityLevel Classify(Patient patient)
+    public void RegisterStaff(StaffMember staff)
     {
-        bool p = rules.IsSevere(patient.Symptom);
-        bool q = patient.Vitals.IsHeartRateAbnormal();
-        bool r = patient.Vitals.IsBloodPressureAbnormal();
+        staffList.Add(staff);
+    }
 
-        if (p)
+    public bool EvaluateP(Patient p)
+    {
+        return rules.IsSevere(p.Symptoms);
+    }
+
+    public bool EvaluateQ(VitalSigns v)
+    {
+        return v.HeartRate < MinHeartRate ||
+               v.HeartRate > MaxHeartRate;
+    }
+
+    public bool EvaluateR(VitalSigns v)
+    {
+        return v.SystolicBP < MinSystolicBP ||
+               v.SystolicBP > MaxSystolicBP;
+    }
+
+    public PriorityLevel Classify(bool p, bool q, bool r)
+    {
+        if (p || (q && r))
+            return PriorityLevel.Red;
+
+        if (q || r)
+            return PriorityLevel.Yellow;
+
+        return PriorityLevel.Green;
+    }
+
+    public PriorityLevel TriagePatient(Patient patient)
+    {
+        patient.Priority = Classify(
+            EvaluateP(patient),
+            EvaluateQ(patient.Vitals),
+            EvaluateR(patient.Vitals));
+
+        queue.EnterQueue(patient);
+
+        return patient.Priority;
+    }
+
+    public void AlertStaff(Patient patient)
+    {
+        foreach (StaffMember staff in staffList)
         {
-            return PriorityLevel.Red;       // Red = P
-        }
-        else if (q && r)
-        {
-            return PriorityLevel.Red;       // Red = Q AND R
-        }
-        else if (q || r)
-        {
-            return PriorityLevel.Yellow;    // Yellow = NOT P AND (Q OR R)
-        }
-        else
-        {
-            return PriorityLevel.Green;     // Green = NOT P AND NOT Q AND NOT R
+            if (staff.IsOnDuty)
+            {
+                staff.ReceiveAlert(patient);
+            }
         }
     }
 
-    
-    public string GetPQR(Patient patient)
+    public Patient? GetNextPatient()
     {
-        bool p = rules.IsSevere(patient.Symptom);
-        bool q = patient.Vitals.IsHeartRateAbnormal();
-        bool r = patient.Vitals.IsBloodPressureAbnormal();
-
-        return "P=" + (p ? "T" : "F") + "  Q=" + (q ? "T" : "F") + "  R=" + (r ? "T" : "F");
+        return queue.PeekNext();
     }
 }

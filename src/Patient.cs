@@ -1,30 +1,37 @@
 using System;
+using System.Collections.Generic;
+
 namespace HospitalTriage;
-// Patient inherits from person
+
 public class Patient : Person
 {
-    public string PatientId { get; private set; }
-    public string Symptom { get; set; }
+    public List<string> Symptoms { get; set; }
     public VitalSigns Vitals { get; set; }
     public PriorityLevel Priority { get; set; }
-    public DateTime ArrivalTime { get; private set; }
-    public string Status { get; set; }     // "Waiting" or "Treated"
-    public string TreatedBy { get; set; }
+    public DateTime ArrivalTime { get; set; }
 
-    public Patient(string id, string name, int age, string symptom, VitalSigns vitals)
-        : base(name, age)
+    public Patient(
+        int patientId, string name, int age, VitalSigns vitals)
+        : base(patientId, name, age)
     {
-        PatientId = id;
-        Symptom = symptom;
+        Symptoms = new List<string>();
         Vitals = vitals;
         Priority = PriorityLevel.Green;
         ArrivalTime = DateTime.Now;
-        Status = "Waiting";
-        TreatedBy = "-";
     }
 
-    public override string GetInfo()
+    public void AddSymptom(string symptom)
     {
-        return PatientId + " - " + Name + " (Age " + Age + ")";
+        Symptoms.Add(symptom);
+    }
+
+    public DateTime GetWaitingTime()
+    {
+        return ArrivalTime;
+    }
+
+    public override string GetDetails()
+    {
+        return $"Patient ID: {PersonID}, Name: {Name}, Priority: {Priority}";
     }
 }

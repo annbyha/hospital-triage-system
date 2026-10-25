@@ -1,35 +1,42 @@
+using System;
 using System.Collections.Generic;
+
 namespace HospitalTriage;
+
 public class SevereSymptomRules
 {
-    private List<string> severeSymptoms;
-    private List<string> mildSymptoms;
+    private List<string> severeSymptoms = new List<string>();
 
     public SevereSymptomRules()
     {
-        severeSymptoms = new List<string>();
         severeSymptoms.Add("Difficulty breathing");
         severeSymptoms.Add("Chest pain");
         severeSymptoms.Add("Unconsciousness");
-
-        mildSymptoms = new List<string>();
-        mildSymptoms.Add("Fever");
-        mildSymptoms.Add("Headache");
-        mildSymptoms.Add("Cough");
-        mildSymptoms.Add("Minor injury");
     }
 
-    // Proposition P
-    public bool IsSevere(string symptom)
+    public void AddSevereSymptoms(string symptom)
     {
-        return severeSymptoms.Contains(symptom);
+        if (!severeSymptoms.Contains(symptom))
+        {
+            severeSymptoms.Add(symptom);
+        }
     }
 
-    public List<string> GetAllSymptoms()
+    public bool IsSevere(List<string> symptoms)
     {
-        List<string> all = new List<string>();
-        all.AddRange(severeSymptoms);
-        all.AddRange(mildSymptoms);
-        return all;
+        foreach (string symptom in symptoms)
+        {
+            foreach (string severe in severeSymptoms)
+            {
+                if (string.Equals(
+                    symptom, severe,
+                    StringComparison.OrdinalIgnoreCase))
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 }
