@@ -7,19 +7,19 @@
 
 A C#-based **Hospital Patient Triage System** developed to demonstrate Object-Oriented Programming (OOP), propositional logic, patient prioritisation, and medical staff coordination.
 
-## 📌 1. Project Overview
+##  1. Project Overview
 
 Patient triage is the process of assessing patients and prioritising their treatment based on the urgency of their conditions. During busy periods, an organised triage process can help medical staff identify patients who require immediate attention.
 
 This project models a hospital triage system that evaluates patient symptoms and vital signs, assigns priority levels, manages the patient queue, and supports communication between nurses and doctors.
 
-## ❗ 2. Problem Statement
+##  2. Problem Statement
 
 Manual patient prioritisation can become challenging during peak hours. Without a consistent assessment process, urgent cases may experience delays while medical staff manage multiple patients.
 
 The Hospital Patient Triage System aims to demonstrate how predefined decision rules and an organised queue can support a more consistent patient prioritisation process.
 
-## 🎯 3. Project Objectives
+##  3. Project Objectives
 
 - To apply Object-Oriented Programming principles using C#.
 - To represent patient triage decisions using propositional logic.
@@ -28,7 +28,7 @@ The Hospital Patient Triage System aims to demonstrate how predefined decision r
 - To manage the patient queue according to triage priority.
 - To model interactions between patients, nurses, and doctors.
 
-## ✨ 4. System Features
+##  4. System Features
 
 - **Patient Information Management** — stores patient details, symptoms, and vital signs.
 - **Triage Evaluation** — evaluates patient conditions using predefined rules.
@@ -37,7 +37,7 @@ The Hospital Patient Triage System aims to demonstrate how predefined decision r
 - **Staff Coordination** — models communication between the triage system and medical staff.
 - **Severe Symptom Detection** — checks symptoms against predefined severe symptom rules.
 
-## 🚦 5. Triage Priority Levels
+##  5. Triage Priority Levels
 
 | Priority | Category | Description |
 |---|---|---|
@@ -47,7 +47,7 @@ The Hospital Patient Triage System aims to demonstrate how predefined decision r
 
 *The priority assigned depends on the rules implemented in the system. This project is an academic simulation and is not intended for real-world medical decision-making.*
 
-## 🧠 6. Propositional Logic
+##  6. Propositional Logic
 
 Propositional logic is used to represent conditions involved in the triage decision process.
 
@@ -66,7 +66,7 @@ The following symbols describe the intended evaluation criteria:
 
 **Note:** These expressions must correspond to the final decision rules implemented in `TriageEngine`. Update this table if the actual code uses different conditions.
 
-## 🧩 7. System Classes
+##  7. System Classes
 
 The system consists of 10 classes and one enum based on the project UML design.
 
@@ -83,7 +83,7 @@ The system consists of 10 classes and one enum based on the project UML design.
 | `SevereSymptomRules` | Defines and checks severe symptoms. |
 | `TriageEngine` | Evaluates patient conditions and determines triage priority. |
 
-## 🏗️ 8. Object-Oriented Design
+##  8. Object-Oriented Design
 
 The project demonstrates key Object-Oriented Programming concepts:
 
@@ -92,15 +92,9 @@ The project demonstrates key Object-Oriented Programming concepts:
 - **Abstraction:** Each class has a specific responsibility within the system.
 - **Association:** The triage engine interacts with patients, vital signs, the patient queue, and staff.
 
-## 📊 9. UML Class Diagram
 
-The UML class diagram illustrates the system's classes, attributes, methods, and relationships.
 
-![Hospital Patient Triage System UML Diagram](docs/uml.png)
-
-> Ensure the UML image is stored at `docs/uml.png` in the repository. Update the image path if the file is stored elsewhere.
-
-## ▶️ 10. How to Run
+##  9. How to Run
 
 ### Prerequisites
 
@@ -128,7 +122,7 @@ Replace `YOUR-USERNAME/YOUR-REPOSITORY` with the actual GitHub repository path.
 
 If the project contains only a class library, a separate executable project is required to run the demonstration.
 
-## 👥 11. Group Members — Group 04
+##  10. Group Members — Group 04
 
 | No. | Name | Programme | Student ID |
 |---:|---|:---:|---:|
@@ -138,7 +132,7 @@ If the project contains only a class library, a separate executable project is r
 | 4 | Humaira Kaisah Binti Ahmad Sherhan | IT | 24006090 |
 | 5 | Deenira Lipin | CS | 26000190 |
 
-## 🎓 12. Academic Information
+##  12. Academic Information
 
 **Institution:** Universiti Teknologi PETRONAS  
 **Academic Year:** 2026  
