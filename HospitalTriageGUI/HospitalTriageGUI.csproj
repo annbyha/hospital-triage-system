@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>HospitalTriageGUI</RootNamespace>
+    <!-- Windows scales the whole window uniformly on 125%/150% displays, so layouts never overlap. -->
+    <ApplicationHighDpiMode>DpiUnawareGdiScaled</ApplicationHighDpiMode>
+    <AssemblyTitle>Hospital Patient Triage System</AssemblyTitle>
+    <!-- Allows the project to be built on non-Windows machines too (no effect on Windows). -->
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\hospital-triage-system-full-code\hospital-triage-system.csproj" />
+  </ItemGroup>
+
+</Project>
